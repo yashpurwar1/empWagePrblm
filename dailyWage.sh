@@ -38,3 +38,4 @@ then
 fi
 echo "Daily wage=$dailyWage"
 echo "Total wage=$wages"
+echo "daysWages =$dayWages"
