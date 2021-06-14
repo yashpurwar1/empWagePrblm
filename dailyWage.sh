@@ -16,12 +16,23 @@ partHour=8
 partWage=$(($partHour*$wagePerHour))
 monthlyWage=$(($dailyWage*20))
 
-totalWorkingHour=100
+
+function getWorkingHour()
+{
+	read -p "Enter total working hour" totalWorkingHour
+	return $totalWorkingHour
+}
+
+getWorkingHour
+totalWorkingHour=$?
 days=20
 if [ $totalWorkingHour -le 100 ]
 then
+	wages=$(($totalWorkingHour*$wagePerHour))
+else
 	wages=$((100*$wagePerHour))
 fi
+
 if [ $days -le 20 ]
 then
 	wages=$(($dailyWage*$days))
