@@ -10,6 +10,8 @@ else
         echo "Employee is present"
 fi
 
-wageHour=20
+wagePerHour=20
 dayHour=8
-dailyWage=$(($wageHour*$dayHour))
+dailyWage=$(($wagePerHour*$dayHour))
+partHour=8
+partWage=$(($partHour*$wagePerHour))
