@@ -3,13 +3,12 @@
 echo "Welcome to employee wage management system"
 
 rand=$(($RANDOM%2))
-if [ $rand -eq 0 ]
-then
-        echo "Employee is absent"
-else
-        echo "Employee is present"
-fi
-
+case $rand in
+	0) echo "Employee is absent"
+		;;
+	*) echo "Employee is present"
+		;;
+esac
 wagePerHour=20
 dayHour=8
 dailyWage=$(($wagePerHour*$dayHour))
