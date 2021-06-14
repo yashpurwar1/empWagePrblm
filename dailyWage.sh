@@ -14,3 +14,4 @@ dayHour=8
 dailyWage=$(($wagePerHour*$dayHour))
 partHour=8
 partWage=$(($partHour*$wagePerHour))
+monthlyWage=$(($dailyWage*20))
